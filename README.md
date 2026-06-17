@@ -1,4 +1,7 @@
 # iakathon
+Projet gagnant de l'IAkathon réalisé de 10h à 18h. Le hackathon a été organisé par le département de la Meurthe-et-Moselle et consistait à transformer la relation entre une administration et ses usagers (administrés, citoyens), sans dégrader la confiance, l’accessibilité, l’égalité de traitement et le rôle de l’humain.
+
+Pour cela, nous avons fait le pari de partir sur un projet qui permettrait de simplifier la lecture de documents administratifs en vue des incompréhensions persistantes face à des lettres et mails juridiquement verbeux. Ce projet utilise de l'OCR pour la reconnaissance du texte, utilise un système de RAG pour former des réponses pertinentes avec un modèle de langage. Les données injectées dans le RAG proviennent de site gouvernementaux et de leurs instances (CAF, Ameli...). Le but est d'offrir une simplification de document par IA, tout en conservant la confidentialité et la véracité.
 
 ## Scraper ANTAI
 
