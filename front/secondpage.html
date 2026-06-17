@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title data-i18n="second.browserTitle">Simplifia</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline-variant": "#c6c5d6",
+                        "surface-container-high": "#eae7e7",
+                        "secondary-fixed-dim": "#ffb4aa",
+                        "on-secondary-fixed": "#410001",
+                        "primary-container": "#000091",
+                        "on-tertiary": "#ffffff",
+                        "marianne-red": "#E1000F",
+                        "surface-tint": "#4850c6",
+                        "primary-fixed": "#e0e0ff",
+                        "on-surface-variant": "#454653",
+                        "on-tertiary-fixed-variant": "#45464e",
+                        "surface": "#fcf9f8",
+                        "on-secondary-container": "#fffbff",
+                        "on-primary-container": "#7a82fb",
+                        "ghost-gray": "#EEEEEE",
+                        "tertiary-fixed-dim": "#c5c6ce",
+                        "background": "#fcf9f8",
+                        "secondary-fixed": "#ffdad5",
+                        "on-tertiary-container": "#8d8e96",
+                        "outline": "#767685",
+                        "error-container": "#ffdad6",
+                        "navy-blue": "#000091",
+                        "inverse-primary": "#bfc2ff",
+                        "on-surface": "#1c1b1b",
+                        "inverse-on-surface": "#f3f0ef",
+                        "surface-container": "#f0edec",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed-dim": "#bfc2ff",
+                        "on-secondary-fixed-variant": "#930006",
+                        "reading-surface": "#F6F6F6",
+                        "secondary-container": "#e90d14",
+                        "tertiary-fixed": "#e1e2eb",
+                        "on-error-container": "#93000a",
+                        "inverse-surface": "#313030",
+                        "on-primary-fixed": "#00006e",
+                        "surface-container-highest": "#e5e2e1",
+                        "surface-dim": "#dcd9d9",
+                        "tertiary": "#101319",
+                        "primary": "#000053",
+                        "on-tertiary-fixed": "#191b22",
+                        "on-background": "#1c1b1b",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#f6f3f2",
+                        "on-primary-fixed-variant": "#2f36ae",
+                        "on-error": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "surface-bright": "#fcf9f8",
+                        "error": "#ba1a1a",
+                        "secondary": "#bc000a",
+                        "tertiary-container": "#25272e",
+                        "surface-variant": "#e5e2e1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter-mobile": "16px",
+                        "margin-mobile": "24px",
+                        "stack-lg": "40px",
+                        "stack-sm": "12px",
+                        "stack-md": "24px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "label-lg": ["Inter"],
+                        "headline-sm": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "label-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["20px", { "lineHeight": "30px", "fontWeight": "400" }],
+                        "label-lg": ["16px", { "lineHeight": "20px", "fontWeight": "600" }],
+                        "headline-sm": ["22px", { "lineHeight": "28px", "fontWeight": "700" }],
+                        "headline-lg": ["34px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "body-md": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-md": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "label-md": ["14px", { "lineHeight": "18px", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .icon-fill {
+            font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-slate-100 dark:bg-zinc-900 text-on-surface font-body-md text-body-md antialiased min-h-screen flex flex-col items-center justify-center">
+    <div class="w-full max-w-[450px] min-h-screen bg-reading-surface text-on-surface flex flex-col shadow-2xl border-x border-ghost-gray dark:border-outline-variant relative">
+        <!-- TopAppBar -->
+        <header
+            class="fixed top-0 max-w-[450px] w-full left-1/2 -translate-x-1/2 z-50 bg-surface dark:bg-surface-dim border-b border-ghost-gray dark:border-outline-variant flex items-center px-margin-mobile h-16">
+            <button class="min-w-0 flex-1 text-left transition-opacity active:opacity-80" data-app-link="index.html" type="button">
+            <h1
+                class="font-headline-sm text-headline-sm font-bold text-navy-blue dark:text-on-primary-fixed-variant truncate"
+                data-i18n="second.headerTitle">
+                Simplifia
+            </h1>
+        </button>
+        <div class="ml-3 relative" data-language-selector>
+            <button
+                aria-expanded="false"
+                aria-haspopup="true"
+                class="flex items-center gap-2 px-3 py-1.5 rounded border border-transparent hover:border-outline-variant hover:bg-surface-container-low transition-colors text-navy-blue"
+                data-language-trigger
+                type="button">
+                <span class="material-symbols-outlined text-[18px]" data-icon="language">language</span>
+                <span class="font-label-md text-label-md" data-language-current-label>Français</span>
+                <span class="material-symbols-outlined text-[16px]" data-icon="expand_more">expand_more</span>
+            </button>
+            <div
+                class="hidden absolute top-full right-0 mt-2 bg-surface border border-ghost-gray shadow-lg rounded-lg py-1 min-w-[180px] z-50"
+                data-language-menu>
+                <button class="w-full flex items-center gap-3 px-4 py-2 hover:bg-surface-container-low text-left font-label-md transition-colors" data-language-option="fr" type="button">
+                    <span class="inline-flex h-5 w-5 items-center justify-center rounded-full border border-outline bg-transparent text-[10px] font-semibold uppercase text-on-surface-variant" data-language-badge>FR</span>
+                    <span>Français</span>
+                    <span class="material-symbols-outlined text-[18px] invisible ml-auto" data-language-check>check</span>
+                </button>
+                <button class="w-full flex items-center gap-3 px-4 py-2 hover:bg-surface-container-low text-left font-label-md transition-colors" data-language-option="en" type="button">
+                    <span class="inline-flex h-5 w-5 items-center justify-center rounded-full border border-outline bg-transparent text-[10px] font-semibold uppercase text-on-surface-variant" data-language-badge>EN</span>
+                    <span>English</span>
+                    <span class="material-symbols-outlined text-[18px] invisible ml-auto" data-language-check>check</span>
+                </button>
+                <button class="w-full flex items-center gap-3 px-4 py-2 hover:bg-surface-container-low text-left font-label-md transition-colors" data-language-option="es" type="button">
+                    <span class="inline-flex h-5 w-5 items-center justify-center rounded-full border border-outline bg-transparent text-[10px] font-semibold uppercase text-on-surface-variant" data-language-badge>ES</span>
+                    <span>Español</span>
+                    <span class="material-symbols-outlined text-[18px] invisible ml-auto" data-language-check>check</span>
+                </button>
+                <button class="w-full flex items-center gap-3 px-4 py-2 hover:bg-surface-container-low text-left font-label-md transition-colors" data-language-option="ar" type="button">
+                    <span class="inline-flex h-5 w-5 items-center justify-center rounded-full border border-outline bg-transparent text-[10px] font-semibold uppercase text-on-surface-variant" data-language-badge>AR</span>
+                    <span>العربية</span>
+                    <span class="material-symbols-outlined text-[18px] invisible ml-auto" data-language-check>check</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <!-- Main Content Canvas -->
+    <main class="flex-grow pt-[80px] pb-32 px-margin-mobile w-full">
+        <div class="mb-stack-md">
+            <p class="font-body-lg text-body-lg text-on-surface-variant mb-2" data-i18n="second.summaryLabel">Résumé simplifié de votre document</p>
+            <h2 class="font-headline-md text-headline-md text-on-surface" data-analysis-document-title data-i18n="second.documentTitle">Avis de mise en demeure</h2>
+        </div>
+        <div class="flex flex-col gap-stack-md">
+            <!-- Block 1: Le Problème -->
+            <section class="bg-surface-container-lowest border border-ghost-gray rounded-xl p-stack-md">
+                <div class="flex items-start gap-3 mb-stack-sm">
+                    <span class="material-symbols-outlined text-marianne-red icon-fill mt-1" data-analysis-section-icon data-icon="error"
+                        data-weight="fill">error</span>
+                    <div>
+                        <h3 class="font-headline-sm text-headline-sm text-on-surface" data-analysis-section-title data-i18n="second.problemTitle">Le Problème</h3>
+                    </div>
+                </div>
+                <div class="pl-9">
+                    <p class="font-body-md text-body-md text-on-surface-variant whitespace-pre-line" data-analysis-answer data-i18n="second.problemBody">
+                        L'administration indique qu'il manque des documents justificatifs pour finaliser votre dossier
+                        d'aide au logement pour l'année en cours. Sans ces documents, vos droits pourraient être
+                        suspendus.
+                    </p>
+                </div>
+            </section>
+            <!-- Block 2: La Solution -->
+            <section class="bg-surface-container-lowest border border-ghost-gray rounded-xl p-stack-md" data-analysis-static-section>
+                <div class="flex items-start gap-3 mb-stack-sm">
+                    <span class="material-symbols-outlined text-navy-blue mt-1"
+                        data-icon="check_circle">check_circle</span>
+                    <div>
+                        <h3 class="font-headline-sm text-headline-sm text-on-surface" data-i18n="second.solutionTitle">La Solution</h3>
+                    </div>
+                </div>
+                <div class="pl-9">
+                    <p class="font-body-md text-body-md text-on-surface-variant" data-i18n="second.solutionBody">
+                        Vous devez envoyer la copie de votre dernier avis d'imposition et une quittance de loyer récente
+                        datant de moins de 3 mois.
+                    </p>
+                </div>
+            </section>
+            <!-- Block 3: Le Délai -->
+            <section class="bg-surface-container-lowest border border-ghost-gray rounded-xl p-stack-md" data-analysis-static-section>
+                <div class="flex items-start gap-3 mb-stack-sm">
+                    <span class="material-symbols-outlined text-on-surface mt-1" data-icon="schedule">schedule</span>
+                    <div>
+                        <h3 class="font-headline-sm text-headline-sm text-on-surface" data-i18n="second.deadlineTitle">Le Délai</h3>
+                    </div>
+                </div>
+                <div class="pl-9 flex flex-col gap-2">
+                    <p class="font-body-md text-body-md text-on-surface-variant">
+                        <span data-i18n="second.deadlineIntro">Vous avez jusqu'au</span>
+                        <strong class="text-on-surface" data-i18n="second.deadlineDate">15 Octobre 2024</strong>
+                        <span data-i18n="second.deadlineSuffix">pour fournir ces documents.</span>
+                    </p>
+                    <div
+                        class="inline-flex items-center gap-2 bg-surface-container py-1 px-3 rounded-full self-start mt-2 border border-outline-variant">
+                        <span class="material-symbols-outlined text-[18px]" data-icon="warning">warning</span>
+                        <span class="font-label-md text-label-md" data-i18n="second.deadlineBadge">Action requise rapidement</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- Bottom Fixed Action -->
+    <div class="fixed bottom-0 max-w-[450px] w-full left-1/2 -translate-x-1/2 bg-surface border-t border-ghost-gray p-margin-mobile z-40 pb-safe">
+        <div class="w-full">
+            <button
+                onclick="window.location.href=window.GovAppI18n.urlFor('threepage.html')"
+                class="w-full bg-navy-blue text-on-primary h-[56px] rounded-full font-label-lg text-label-lg flex justify-center items-center active:opacity-80 transition-opacity">
+                <span data-i18n="second.nextSteps">Voir les démarches</span>
+            </button>
+        </div>
+    </div>
+    </div>
+    <script src="i18n.js"></script>
+</body>
+
+</html>

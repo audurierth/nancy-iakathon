@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title data-i18n="loader.browserTitle">Simplifia</title>
+    <!-- Google Fonts: Inter & Material Symbols -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@200,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Tailwind Theme Configuration -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#f6f3f2",
+                        "outline": "#767685",
+                        "on-secondary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "secondary-container": "#e90d14",
+                        "on-primary-fixed-variant": "#2f36ae",
+                        "tertiary-fixed-dim": "#c5c6ce",
+                        "tertiary-fixed": "#e1e2eb",
+                        "on-secondary-container": "#fffbff",
+                        "primary-container": "#000091",
+                        "secondary-fixed-dim": "#ffb4aa",
+                        "secondary-fixed": "#ffdad5",
+                        "surface-container-highest": "#e5e2e1",
+                        "surface-tint": "#4850c6",
+                        "on-tertiary-fixed-variant": "#45464e",
+                        "surface-container-high": "#eae7e7",
+                        "error": "#ba1a1a",
+                        "outline-variant": "#c6c5d6",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#454653",
+                        "inverse-primary": "#bfc2ff",
+                        "reading-surface": "#F6F6F6",
+                        "on-primary-container": "#7a82fb",
+                        "tertiary": "#101319",
+                        "background": "#fcf9f8",
+                        "navy-blue": "#000091",
+                        "on-error-container": "#93000a",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#e0e0ff",
+                        "inverse-on-surface": "#f3f0ef",
+                        "marianne-red": "#E1000F",
+                        "surface-dim": "#dcd9d9",
+                        "on-tertiary-fixed": "#191b22",
+                        "primary": "#000053",
+                        "on-surface": "#1c1b1b",
+                        "on-primary-fixed": "#00006e",
+                        "primary-fixed-dim": "#bfc2ff",
+                        "on-tertiary-container": "#8d8e96",
+                        "ghost-gray": "#EEEEEE",
+                        "secondary": "#bc000a",
+                        "surface-container": "#f0edec",
+                        "inverse-surface": "#313030",
+                        "on-primary": "#ffffff",
+                        "surface-variant": "#e5e2e1",
+                        "on-background": "#1c1b1b",
+                        "on-secondary-fixed-variant": "#930006",
+                        "tertiary-container": "#25272e",
+                        "surface-bright": "#fcf9f8",
+                        "on-secondary-fixed": "#410001",
+                        "error-container": "#ffdad6",
+                        "surface": "#fcf9f8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "stack-lg": "40px",
+                        "margin-mobile": "24px",
+                        "stack-sm": "12px",
+                        "stack-md": "24px",
+                        "unit": "8px",
+                        "gutter-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "label-lg": ["Inter"],
+                        "headline-sm": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-lg": ["34px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "body-lg": ["20px", { "lineHeight": "30px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "18px", "fontWeight": "500" }],
+                        "label-lg": ["16px", { "lineHeight": "20px", "fontWeight": "600" }],
+                        "headline-sm": ["22px", { "lineHeight": "28px", "fontWeight": "700" }],
+                        "body-md": ["18px", { "lineHeight": "28px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        .icon-fill {
+            font-variation-settings: 'FILL' 1, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-slate-100 dark:bg-zinc-900 text-on-surface font-body-md text-body-md antialiased min-h-screen flex flex-col items-center justify-center">
+    <div class="w-full max-w-[450px] min-h-screen bg-surface-container-lowest text-on-surface flex flex-col justify-between p-6 shadow-2xl border-x border-ghost-gray dark:border-outline-variant relative">
+        <header
+            class="fixed top-0 max-w-[450px] w-full left-1/2 -translate-x-1/2 z-50 bg-surface dark:bg-surface-dim border-b border-ghost-gray dark:border-outline-variant flex items-center px-margin-mobile h-16">
+            <h1 class="font-headline-sm text-headline-sm font-bold text-navy-blue dark:text-on-primary-fixed-variant truncate" data-i18n="loader.title">
+                Simplifia
+            </h1>
+        </header>
+        <div class="w-full flex-grow flex flex-col items-center justify-center pt-[88px] pb-10">
+            <!-- Central Icon: Document + Shield Concept -->
+            <div class="mb-stack-md flex justify-center items-center">
+                <span class="material-symbols-outlined text-navy-blue" style="font-size: 96px; line-height: 1;">
+                    policy
+                </span>
+            </div>
+            <p class="font-body-md text-body-md text-on-surface-variant text-center mb-stack-md" data-i18n="loader.subtitle">
+                Analyse en cours...
+            </p>
+            <!-- Vertical Checklist -->
+            <div class="flex flex-col gap-stack-sm w-full max-w-sm" id="steps-container">
+                <!-- Step 1: Completed -->
+                <div id="step-1" class="flex flex-row items-center gap-gutter-mobile p-unit bg-surface-container-low rounded-lg border border-ghost-gray">
+                    <span class="step-icon material-symbols-outlined text-navy-blue animate-spin shrink-0" style="font-size: 28px;">
+                        progress_activity
+                    </span>
+                    <span class="step-text font-body-md text-body-md text-navy-blue font-semibold" data-i18n="loader.step1" data-step-key="loader.step1">
+                        Extraction du texte
+                    </span>
+                </div>
+                <!-- Step 2: In Progress -->
+                <div id="step-2" class="flex flex-row items-center gap-gutter-mobile p-unit opacity-60">
+                    <span class="step-icon material-symbols-outlined text-outline-variant shrink-0" style="font-size: 28px;">
+                        radio_button_unchecked
+                    </span>
+                    <span class="step-text font-body-md text-body-md text-on-surface-variant" data-i18n="loader.step2" data-step-key="loader.step2">
+                        Anonymisation de vos données (RGPD)
+                    </span>
+                </div>
+                <!-- Step 3: Pending -->
+                <div id="step-3" class="flex flex-row items-center gap-gutter-mobile p-unit opacity-60">
+                    <span class="step-icon material-symbols-outlined text-outline-variant shrink-0" style="font-size: 28px;">
+                        radio_button_unchecked
+                    </span>
+                    <span class="step-text font-body-md text-body-md text-on-surface-variant" data-i18n="loader.step3" data-step-key="loader.step3">
+                        Synthèse par l'IA souveraine
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <div class="w-full flex flex-row items-center justify-center gap-unit mt-auto text-on-surface-variant">
+            <span class="material-symbols-outlined" style="font-size: 18px;">
+                lock
+            </span>
+            <span class="font-label-md text-label-md" data-i18n="loader.secureConnection">
+                Connexion sécurisée
+            </span>
+        </div>
+    </div>
+
+    <script src="i18n.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const step1 = document.getElementById("step-1");
+            const step2 = document.getElementById("step-2");
+            const step3 = document.getElementById("step-3");
+
+            function getStepLabel(stepElement) {
+                return window.GovAppI18n.t(stepElement.querySelector(".step-text").dataset.stepKey);
+            }
+
+            function setCompleted(stepElement) {
+                stepElement.className = "flex flex-row items-center gap-gutter-mobile p-unit";
+                stepElement.querySelector(".step-icon").className = "step-icon material-symbols-outlined text-[#16a34a] icon-fill shrink-0";
+                stepElement.querySelector(".step-icon").textContent = "check_circle";
+                stepElement.querySelector(".step-text").className = "step-text font-body-md text-body-md text-on-surface";
+                stepElement.querySelector(".step-text").textContent = getStepLabel(stepElement);
+            }
+
+            function setInProgress(stepElement) {
+                stepElement.className = "flex flex-row items-center gap-gutter-mobile p-unit bg-surface-container-low rounded-lg border border-ghost-gray";
+                stepElement.querySelector(".step-icon").className = "step-icon material-symbols-outlined text-navy-blue animate-spin shrink-0";
+                stepElement.querySelector(".step-icon").textContent = "progress_activity";
+                stepElement.querySelector(".step-text").className = "step-text font-body-md text-body-md text-navy-blue font-semibold";
+                stepElement.querySelector(".step-text").textContent = getStepLabel(stepElement);
+            }
+
+            // Step 1 is in progress initially.
+            // After 1.2 seconds, complete Step 1 and start Step 2
+            setTimeout(() => {
+                setCompleted(step1);
+                setInProgress(step2);
+            }, 1200);
+
+            // After 2.4 seconds, complete Step 2 and start Step 3
+            setTimeout(() => {
+                setCompleted(step2);
+                setInProgress(step3);
+            }, 2400);
+
+            // After 3.6 seconds, complete Step 3
+            setTimeout(() => {
+                setCompleted(step3);
+            }, 3600);
+
+            // After 4.2 seconds, redirect to secondpage.html
+            setTimeout(() => {
+                window.location.href = window.GovAppI18n.urlFor("secondpage.html");
+            }, 4200);
+        });
+    </script>
+</body>
+
+</html>
